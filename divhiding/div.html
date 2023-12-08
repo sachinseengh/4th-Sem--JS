@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShowHideExample</title>
+    <style>
+
+        #banner {
+            height: 100px;
+            width: 100px;
+            background-color: red;
+        }
+    </style>
+    <script>
+        
+        
+       function toggler(){
+        var banner = document.getElementById("banner");
+       if(banner.style.display == "block"){
+        banner.style.display="none";
+       }else{
+        banner.style.display="block";
+       }
+        
+    }
+       function color(){
+        var banner = document.getElementById("banner");
+       if(banner.style.backgroundColor == "green"){
+        banner.style.backgroundColor="red";
+       }else{
+        banner.style.backgroundColor="green";
+       }
+        
+    }
+    </script>
+</head>
+<body>
+    <div id="banner" onmouseover="color()" onmouseout="color()"></div>
+   <input type="button" value="show hide" onclick="toggler()">
+</body>
+</html>
