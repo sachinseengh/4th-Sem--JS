@@ -1,23 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 
     <script>
+      document.cookie =
+        "username=john nash;expires=wed,8 jan 24 12:00 UTC,path=/";
 
-        document.cookie="username=john nash;expires=wed,8 jan 24 12:00 UTC,path=/"; 
+      document.write(document.cookie);
 
-         document.write(document.cookie);
-
-
-        sessionStorage.setItem("lastname", "Smith");
-        let lastName=sessionStorage.getItem("lastname");
-        document.write(lastName);
+      sessionStorage.setItem("lastname", "Smith");
+      let lastName = sessionStorage.getItem("lastname");
+      document.write(lastName);
     </script>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body></body>
 </html>
