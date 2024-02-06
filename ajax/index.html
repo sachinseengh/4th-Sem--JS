@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX Search Example</title>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script> -->
+    <!-- <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script> -->
+    <script src="D:\BCA\4.Fourth Sem\Scripting Language\JavaScript\ajax\jquery.js"></script>
+
+
+
+</head>
+<body>
+
+<h1>Search using AJAX</h1>
+
+<input type="text" id="searchInput" placeholder="Enter your search query">
+<button onclick="performSearch()">Search</button>
+
+<div id="searchResults"></div>
+
+<script>
+    function performSearch() {
+        var searchQuery = document.getElementById('searchInput').value;
+
+        // Make an AJAX request
+        $.ajax({
+            type: 'GET',
+            url: 'search.php', // Replace with your server-side script URL
+            data: { query: searchQuery },
+            success: function(response) {
+                // Update the search results div with the received data
+                $('#searchResults').html(response);
+            },
+            error: function(error) {
+                console.error('Error during AJAX request:', error);
+            }
+        });
+    }
+</script>
+
+</body>
+</html>
